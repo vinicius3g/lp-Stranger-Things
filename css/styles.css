@@ -186,7 +186,7 @@ ul {
     justify-content: space-between;
 
     .card {
-      background-image: url("/assets/images/card1.webp");
+      background-image: url("../assets/images/card1.webp");
       width: 32%;
       aspect-ratio: 16/9;
       background-size: cover;
@@ -198,11 +198,11 @@ ul {
     }
 
     .card:nth-child(2) {
-      background-image: url("/assets/images/card2.webp");
+      background-image: url("../assets/images/card2.webp");
     }
 
     .card:nth-child(3) {
-      background-image: url("/assets/images/card3.webp");
+      background-image: url("../assets/images/card3.webp");
     }
   }
 }
@@ -247,7 +247,7 @@ ul {
 }
 
 .bgMonster {
-  background-image: url("/assets/images/bg-sec2.webp");
+  background-image: url("../assets/images/bg-sec2.webp");
   background-position: center;
   background-size: cover;
   z-index: 2;
@@ -260,7 +260,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("/assets/images/bg-footer.webp");
+  background-image: url("../assets/images/bg-footer.webp");
   background-size: cover;
   background-position: center;
 
