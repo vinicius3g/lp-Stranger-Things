@@ -1,0 +1,26 @@
+{
+  "name": "landing-page-devart",
+  "version": "1.0.0",
+  "description": "Landing Page Profissional - Estrutura Moderna com HTML5, CSS3 e JavaScript",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -c-1 -p 8000",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'Add your test command here'"
+  },
+  "keywords": [
+    "landing-page",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "web-design"
+  ],
+  "author": "DevArt",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

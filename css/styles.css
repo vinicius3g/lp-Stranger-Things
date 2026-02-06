@@ -1,0 +1,530 @@
+/* ===========================
+   VARIÁVEIS E RESET
+   =========================== */
+
+:root {
+  --dark-color: #0c0102;
+  --white-color: #ffffff;
+  --white-color-100: #ffffffe6;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url(/assets/fontes/Benguiat\ Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--white-color-100);
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* ===========================
+   TIPOGRAFIA
+   =========================== */
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--gray-color);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white-color);
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid var(--white-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  &:before {
+    content: "";
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+  }
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+
+  .lefth-content,
+  .rigth-content {
+    width: 30%;
+    z-index: 3;
+  }
+
+  .lefth-content {
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: 3.7vw;
+      font-family: "Benguiat", serif;
+    }
+  }
+
+  .rigth-content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+
+  }
+}
+
+.cityes-section {
+  flex-direction: column;
+  position: relative;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cards-wrapper {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-image: url("/assets/images/card1.webp");
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .card:nth-child(2) {
+      background-image: url("/assets/images/card2.webp");
+    }
+
+    .card:nth-child(3) {
+      background-image: url("/assets/images/card3.webp");
+    }
+  }
+}
+
+.testimonials-section {
+  flex-direction: column;
+
+  .logotipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .testimonials-wrapper {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+
+    .testimonial {
+      width: 31%;
+    }
+  }
+}
+
+.tks-section {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0C0102;
+  z-index: 2;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: flex;
+    width: max-content;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.bgMonster {
+  background-image: url("/assets/images/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: #0C0102;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/assets/images/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+
+  .footer-content {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .logoFooter {
+      width: 30%;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat", serif;
+      }
+    }
+
+    .secoesFooter {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .social {
+        ul {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  .logotiposFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .infinite-text {
+    width: max-content;
+    display: flex;
+
+    h3 {
+      color: rgb(191, 191, 191);
+      font-size: 12vw;
+      font-family: "Benguiat", sans-serif;
+      mix-blend-mode: color-dodge;
+      animation: infinite-text 10s infinite linear;
+      padding-left: 8vw;
+    }
+  }
+}
+
+#preloader {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-color);
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 40vw;
+    height: auto;
+
+    path {
+      fill: rgba(168, 19, 19, 0.364);
+      stroke: rgb(168, 19, 19);
+      stroke-dasharray: 550;
+      stroke-dashoffset: 250;
+    }
+  }
+}
+
+@keyframes infinite-text {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1500px) {
+  .cityes-section {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .cityes-section .cards-wrapper .card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+
+    .lefth-content,
+    .rigth-content {
+      width: 100%;
+    }
+
+    .lefth-content {
+
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    .rigth-content {
+      align-items: start;
+
+      p {
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .cityes-section {
+    margin-top: 80px;
+
+    button {
+      display: none;
+    }
+
+    .cards-wrapper {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+
+  .testimonials-section {
+    .logotipos {
+
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    .testimonials-wrapper {
+      flex-direction: column;
+      gap: 48px;
+
+      .testimonial {
+        width: 100%;
+      }
+    }
+  }
+
+  .tks-section {
+    margin: 40px 0px 60px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: max-content;
+      gap: 32px;
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+
+    .footer-content {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+        }
+
+        .institucional {
+          width: 40%;
+        }
+
+        .partners {
+          width: 50%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .logotiposFooter {
+      margin-top: 40px;
+    }
+
+    .infinite-text h3 {
+      font-size: 20vw;
+    }
+  }
+}
